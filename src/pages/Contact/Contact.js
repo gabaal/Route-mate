@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 export const Contact = () => {
   const navigate = useNavigate();
@@ -10,9 +10,10 @@ export const Contact = () => {
   };
 
   return (
-    <>
+    <main>
       <div className="component">Contact</div>
       <button onClick={handleSubmit}>Back To Home</button>
-    </>
+      <Outlet />
+    </main>
   );
 };
